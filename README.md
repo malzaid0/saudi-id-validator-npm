@@ -1,6 +1,8 @@
 <br/>
-<img alt="npm" src="https://img.shields.io/npm/dt/saudi-id-validator">
+<div style="display: flex; flex-direction: row; justify-content: center">
+<img style="margin-right: 10px" alt="npm" src="https://img.shields.io/npm/dt/saudi-id-validator">
 <img alt="npm bundle size" src="https://img.shields.io/bundlephobia/min/saudi-id-validator?label=package%20size">
+</div>
 <br/>
 
 # saudi-id-validator
@@ -8,9 +10,9 @@ A tiny package that helps you validate Saudi national or iqama ids
 
 
 ## Features
-:white_check_mark: Supports Typescript
-:white_check_mark: Accepts number or string
-:white_check_mark: Accepts both eastern and western Arabic numbers 
+:white_check_mark: Supports Typescript <br/>
+:white_check_mark: Accepts number or string <br/>
+:white_check_mark: Accepts both eastern and western Arabic numbers <br/>
 
 
 ## Installation

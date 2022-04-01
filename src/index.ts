@@ -1,0 +1,1 @@
+export { isValidSaudiID } from "./idValidator";

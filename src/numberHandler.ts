@@ -12,4 +12,3 @@ export const isNumeric = (str: any) => {
     !str.includes(",")
   );
 };
-

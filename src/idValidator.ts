@@ -1,24 +1,16 @@
 import {easternToWesternNumbers, isNumeric} from "./numberHandler";
 
 const findBlockLength = (id: string, position: number) => {
-    const temp_length = Number(id.substring(position, position + 1)) * 2;
-    return temp_length.toString().length;
+    return Number(id[position]) >= 5 ? 2 : 1
 };
 
 const evaluateBlock = (blockValue: number, id: string, position: number) => {
-    const trimValue = Number(id.substring(position, position + 1));
+    const trimValue = Number(id[position]);
     if (blockValue === 1) {
         return trimValue * 2;
-    } else if (blockValue === 2) {
-        const sum = trimValue * 2;
-        const firstPlace = Number(sum.toString().substring(0, 1));
-        let secondPlace = 0;
-        if (sum.toString().length > 1) {
-            secondPlace = Number(sum.toString().substring(1, 2));
-        }
-        return firstPlace + secondPlace;
     }
-    return 0;
+    const sum = (trimValue * 2).toString();
+    return Number(sum[0]) + Number(sum[1]);
 };
 
 export const isValidSaudiID = (saudiID: string | number) => {
@@ -28,12 +20,10 @@ export const isValidSaudiID = (saudiID: string | number) => {
         return false;
     }
 
-    let sum =
-        Number(stringID.substring(1, 2)) +
-        Number(stringID.substring(3, 4)) +
-        Number(stringID.substring(5, 6)) +
-        Number(stringID.substring(7, 8));
-
+    let sum = 0
+    for (let position = 1; position < 8; position += 2) {
+        sum += Number(stringID[position])
+    }
     for (let position = 0; position < stringID.length; position += 2) {
         sum += evaluateBlock(findBlockLength(stringID, position), stringID, position);
     }
@@ -43,6 +33,5 @@ export const isValidSaudiID = (saudiID: string | number) => {
         remainder = 0;
     }
 
-    const tempS6 = Number(stringID.substring(9, 10));
-    return tempS6 === remainder;
+    return remainder === Number(stringID[9]);
 };

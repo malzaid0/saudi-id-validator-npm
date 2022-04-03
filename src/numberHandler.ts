@@ -1,4 +1,4 @@
-export const hindiToArabic = (nums: string) =>
+export const easternToWesternNumbers = (nums: string) =>
   nums.replace(/[٠-٩]/g, (d) => "٠١٢٣٤٥٦٧٨٩".indexOf(d).toString());
 
 export const isNumeric = (str: any) => {

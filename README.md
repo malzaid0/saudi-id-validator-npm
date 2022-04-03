@@ -31,10 +31,10 @@ Here's a basic example on how you can use the package:
 ```js
 import { isValidSaudiID } from "saudi-id-validator"
 
-console.log(isValidSaudiID("1000000008")) // => true if this's your id please don't sue me :)
-console.log(isValidSaudiID(1000000008)) // => true
-console.log(isValidSaudiID("١٠٠٠٠٠٠٠٠٨")) // => true
-console.log(isValidSaudiID("1000000000")) // => false
-console.log(isValidSaudiID("100000000")) // => false
+console.log(isValidSaudiID("1000000008"))   // => true if this's your id please don't sue me :)
+console.log(isValidSaudiID(1000000008))     // => true
+console.log(isValidSaudiID("١٠٠٠٠٠٠٠٠٨"))   // => true
+console.log(isValidSaudiID("1000000000"))   // => false
+console.log(isValidSaudiID("100000000"))    // => false
 console.log(isValidSaudiID("not a number")) // => false
 ```

@@ -1,6 +1,6 @@
 {
   "name": "saudi-id-validator",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A tiny package that helps you validate Saudi national and iqama id",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

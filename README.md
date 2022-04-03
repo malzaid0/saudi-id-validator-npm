@@ -1,8 +1,8 @@
 <br/>
-<div style="display: flex; flex-direction: row; justify-content: center; width: 100%">
+<p align="center">
 <img style="margin-right: 10px" alt="npm" src="https://img.shields.io/npm/dt/saudi-id-validator">
 <img alt="npm bundle size" src="https://img.shields.io/bundlephobia/min/saudi-id-validator?label=package%20size">
-</div>
+</p>
 <br/>
 
 # saudi-id-validator

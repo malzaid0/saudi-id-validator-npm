@@ -20,18 +20,13 @@ export const isValidSaudiID = (saudiID: string | number) => {
   }
 
   let sum = 0;
-  for (let position = 0; position < stringID.length - 1; position++) {
-    if (position % 2 === 0) {
-      sum += evaluateDigit(Number(stringID[position]));
+  for (let idx = 0; idx < stringID.length; idx++) {
+    if (idx % 2 === 0) {
+      sum += evaluateDigit(Number(stringID[idx]));
     } else {
-      sum += Number(stringID[position]);
+      sum += Number(stringID[idx]);
     }
   }
 
-  let remainder = 10 - (sum % 10);
-  if (remainder === 10) {
-    remainder = 0;
-  }
-
-  return remainder === Number(stringID[9]);
+  return sum % 10 === 0;
 };

@@ -5,10 +5,5 @@ export const isNumeric = (str: any) => {
   if (typeof str !== "string") {
     return false;
   }
-  return (
-    !isNaN(Number(str)) &&
-    !isNaN(parseFloat(str)) &&
-    !str.includes(".") &&
-    !str.includes(",")
-  );
+  return [...str].every((char: string) => "0123456789".includes(char))
 };

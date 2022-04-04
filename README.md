@@ -6,7 +6,7 @@
 <br/>
 
 # saudi-id-validator
-A tiny package that helps you validate Saudi national or iqama ids
+A tiny package that helps you validate Saudi national or iqama ids. Inspired by the original repo [Saudi-ID-Validator](https://github.com/alhazmy13/Saudi-ID-Validator) so special thanks to them!
 
 
 ## Features

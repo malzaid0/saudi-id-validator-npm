@@ -9,7 +9,7 @@ const evaluateDigit = (currentDigit: number) => {
 };
 
 export const isValidSaudiID = (saudiID: string | number) => {
-  const stringID = easternToWesternNumbers(saudiID.toString());
+  const stringID = easternToWesternNumbers(saudiID.toString()).trim();
 
   if (
     stringID.length !== 10 ||
